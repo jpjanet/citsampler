@@ -12,17 +12,17 @@ Welcome to citsampler's documentation!
 
 citsampler sampler
 ======================
-.. automodule:: src.sampler
+.. automodule:: citsampler.sampler
    :members:
 
 citsampler constraints
 ======================
-.. automodule:: src.constraints
+.. automodule:: citsampler.constraints
    :members:
    
 citsampler __main__
 ======================
-.. automodule:: src.__main__
+.. automodule:: citsampler.__main__
    :members:
 
    

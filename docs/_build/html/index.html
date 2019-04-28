@@ -37,11 +37,11 @@
 <div class="toctree-wrapper compound">
 </div>
 </div>
-<div class="section" id="module-src.sampler">
-<span id="citsampler-sampler"></span><h1>citsampler sampler<a class="headerlink" href="#module-src.sampler" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-citsampler.sampler">
+<span id="citsampler-sampler"></span><h1>citsampler sampler<a class="headerlink" href="#module-citsampler.sampler" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="src.sampler.constrainedMCMC">
-<em class="property">class </em><code class="descclassname">src.sampler.</code><code class="descname">constrainedMCMC</code><span class="sig-paren">(</span><em>constraint</em>, <em>stepsize</em><span class="sig-paren">)</span><a class="headerlink" href="#src.sampler.constrainedMCMC" title="Permalink to this definition">¶</a></dt>
+<dt id="citsampler.sampler.constrainedMCMC">
+<em class="property">class </em><code class="descclassname">citsampler.sampler.</code><code class="descname">constrainedMCMC</code><span class="sig-paren">(</span><em>constraint</em>, <em>stepsize</em><span class="sig-paren">)</span><a class="headerlink" href="#citsampler.sampler.constrainedMCMC" title="Permalink to this definition">¶</a></dt>
 <dd><p>Defines a monte carlo sampler for constrained
 high-dimenisonal integration using rejection sampling</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -57,16 +57,16 @@ high-dimenisonal integration using rejection sampling</p>
 </tbody>
 </table>
 <dl class="method">
-<dt id="src.sampler.constrainedMCMC.proposalDistribution">
-<code class="descname">proposalDistribution</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.sampler.constrainedMCMC.proposalDistribution" title="Permalink to this definition">¶</a></dt>
+<dt id="citsampler.sampler.constrainedMCMC.proposalDistribution">
+<code class="descname">proposalDistribution</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#citsampler.sampler.constrainedMCMC.proposalDistribution" title="Permalink to this definition">¶</a></dt>
 <dd><p>Proposal distribution for MCMC, generates new sample
 based on the current state and stepsize by combination
 with a random vector on the self.dim hypercube</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="src.sampler.constrainedMCMC.step">
-<code class="descname">step</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.sampler.constrainedMCMC.step" title="Permalink to this definition">¶</a></dt>
+<dt id="citsampler.sampler.constrainedMCMC.step">
+<code class="descname">step</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#citsampler.sampler.constrainedMCMC.step" title="Permalink to this definition">¶</a></dt>
 <dd><p>Take one step of rejection-sampling MCMC and update
 the resutling acceptance ratios</p>
 </dd></dl>
@@ -74,8 +74,8 @@ the resutling acceptance ratios</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="src.sampler.outputWriter">
-<code class="descclassname">src.sampler.</code><code class="descname">outputWriter</code><span class="sig-paren">(</span><em>filepath</em>, <em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#src.sampler.outputWriter" title="Permalink to this definition">¶</a></dt>
+<dt id="citsampler.sampler.outputWriter">
+<code class="descclassname">citsampler.sampler.</code><code class="descname">outputWriter</code><span class="sig-paren">(</span><em>filepath</em>, <em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#citsampler.sampler.outputWriter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Defines a monte carlo sampler for constrained
 high-dimenisonal integration using rejection sampling</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -93,8 +93,8 @@ high-dimenisonal integration using rejection sampling</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="src.sampler.rsMcmcPhase">
-<code class="descclassname">src.sampler.</code><code class="descname">rsMcmcPhase</code><span class="sig-paren">(</span><em>constraint</em>, <em>targetSamples</em>, <em>numChains=5</em>, <em>maxIts=False</em>, <em>minIts=False</em>, <em>targetArLow=0.05</em>, <em>targetArHigh=0.25</em>, <em>stepModifier=1.05</em><span class="sig-paren">)</span><a class="headerlink" href="#src.sampler.rsMcmcPhase" title="Permalink to this definition">¶</a></dt>
+<dt id="citsampler.sampler.rsMcmcPhase">
+<code class="descclassname">citsampler.sampler.</code><code class="descname">rsMcmcPhase</code><span class="sig-paren">(</span><em>constraint</em>, <em>targetSamples</em>, <em>numChains=5</em>, <em>maxIts=False</em>, <em>minIts=False</em>, <em>targetArLow=0.05</em>, <em>targetArHigh=0.25</em>, <em>stepModifier=1.05</em><span class="sig-paren">)</span><a class="headerlink" href="#citsampler.sampler.rsMcmcPhase" title="Permalink to this definition">¶</a></dt>
 <dd><p>Perform multi-chain rejection-sampling MCMC on the provided constraint object</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -119,8 +119,8 @@ high-dimenisonal integration using rejection sampling</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="src.sampler.sampler">
-<code class="descclassname">src.sampler.</code><code class="descname">sampler</code><span class="sig-paren">(</span><em>inputFile</em>, <em>outputFile</em>, <em>nResults</em><span class="sig-paren">)</span><a class="headerlink" href="#src.sampler.sampler" title="Permalink to this definition">¶</a></dt>
+<dt id="citsampler.sampler.sampler">
+<code class="descclassname">citsampler.sampler.</code><code class="descname">sampler</code><span class="sig-paren">(</span><em>inputFile</em>, <em>outputFile</em>, <em>nResults</em><span class="sig-paren">)</span><a class="headerlink" href="#citsampler.sampler.sampler" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function to find nResults spanning points satisfying the constraints given 
 in the inputFile, and write them to outputFile</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -142,15 +142,15 @@ in the inputFile, and write them to outputFile</p>
 </dd></dl>
 
 </div>
-<div class="section" id="module-src.constraints">
-<span id="citsampler-constraints"></span><h1>citsampler constraints<a class="headerlink" href="#module-src.constraints" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-citsampler.constraints">
+<span id="citsampler-constraints"></span><h1>citsampler constraints<a class="headerlink" href="#module-citsampler.constraints" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="src.constraints.Constraint">
-<em class="property">class </em><code class="descclassname">src.constraints.</code><code class="descname">Constraint</code><span class="sig-paren">(</span><em>fname</em><span class="sig-paren">)</span><a class="headerlink" href="#src.constraints.Constraint" title="Permalink to this definition">¶</a></dt>
+<dt id="citsampler.constraints.Constraint">
+<em class="property">class </em><code class="descclassname">citsampler.constraints.</code><code class="descname">Constraint</code><span class="sig-paren">(</span><em>fname</em><span class="sig-paren">)</span><a class="headerlink" href="#citsampler.constraints.Constraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constraints loaded from a file.</p>
 <dl class="method">
-<dt id="src.constraints.Constraint.apply">
-<code class="descname">apply</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#src.constraints.Constraint.apply" title="Permalink to this definition">¶</a></dt>
+<dt id="citsampler.constraints.Constraint.apply">
+<code class="descname">apply</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#citsampler.constraints.Constraint.apply" title="Permalink to this definition">¶</a></dt>
 <dd><p>Apply the constraints to a vector, returning True only if all are satisfied</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -163,25 +163,25 @@ in the inputFile, and write them to outputFile</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="src.constraints.Constraint.get_example">
-<code class="descname">get_example</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.constraints.Constraint.get_example" title="Permalink to this definition">¶</a></dt>
+<dt id="citsampler.constraints.Constraint.get_example">
+<code class="descname">get_example</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#citsampler.constraints.Constraint.get_example" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the example feasible vector</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="src.constraints.Constraint.get_ndim">
-<code class="descname">get_ndim</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.constraints.Constraint.get_ndim" title="Permalink to this definition">¶</a></dt>
+<dt id="citsampler.constraints.Constraint.get_ndim">
+<code class="descname">get_ndim</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#citsampler.constraints.Constraint.get_ndim" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the dimension of the space on which the constraints are defined</p>
 </dd></dl>
 
 </dd></dl>
 
 </div>
-<div class="section" id="module-src.__main__">
-<span id="citsampler-main"></span><h1>citsampler __main__<a class="headerlink" href="#module-src.__main__" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-citsampler.__main__">
+<span id="citsampler-main"></span><h1>citsampler __main__<a class="headerlink" href="#module-citsampler.__main__" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
-<dt id="src.__main__.main">
-<code class="descclassname">src.__main__.</code><code class="descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.__main__.main" title="Permalink to this definition">¶</a></dt>
+<dt id="citsampler.__main__.main">
+<code class="descclassname">citsampler.__main__.</code><code class="descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#citsampler.__main__.main" title="Permalink to this definition">¶</a></dt>
 <dd><p>Console access point to src.sampler, used to generate samples from a
 constrained hypercubde defined by the input file. Reads from system
 arguments and should be called with &lt;inputfile&gt; &lt;outputfile&gt; &lt;samples&gt;</p>
@@ -207,9 +207,9 @@ arguments and should be called with &lt;inputfile&gt; &lt;outputfile&gt; &lt;sam
   <h3><a href="#">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Welcome to citsampler’s documentation!</a></li>
-<li><a class="reference internal" href="#module-src.sampler">citsampler sampler</a></li>
-<li><a class="reference internal" href="#module-src.constraints">citsampler constraints</a></li>
-<li><a class="reference internal" href="#module-src.__main__">citsampler __main__</a></li>
+<li><a class="reference internal" href="#module-citsampler.sampler">citsampler sampler</a></li>
+<li><a class="reference internal" href="#module-citsampler.constraints">citsampler constraints</a></li>
+<li><a class="reference internal" href="#module-citsampler.__main__">citsampler __main__</a></li>
 <li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
 </ul>
 <div class="relations">
