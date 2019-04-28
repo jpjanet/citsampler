@@ -6,7 +6,7 @@ from setuptools import setup, find_packages
 # Package meta-data.
 NAME = 'citsampler'
 DESCRIPTION = 'simple rejection sampling MCMC'
-URL = 'https://github.com/me/myproject'
+URL = 'https://github.com/jpjanet/citsampler.git'
 EMAIL = 'jp@mit.edu'
 AUTHOR = 'JP Janet'
 REQUIRES_PYTHON = '>=3.6.0'
@@ -25,6 +25,7 @@ setup(
     packages=find_packages(),
     install_requires=REQUIRED,
     entry_points={'console_scripts': ['citsampler = citsampler.__main__:main']},
-    package_data={'citsampler':['scripts/*.sh']},
+    package_data={'citsampler':['scripts/*.sh','examples/*t.xt']},
+    tests_require=['pytest'],
     setup_requires=[''],
     include_package_data = True)
