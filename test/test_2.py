@@ -20,10 +20,10 @@ def test_1(tmpdir):
     points = []
     with open(outfle,'r') as f:
         for line in f.readlines():
-            points.append(float(i) for i in line.strip().split(' '))
+            points.append(list([float(i) for i in line.strip().split(' ')]))
             
     constraint = Constraint(infile)        
-    outcomes = [constraint.apply(x) for x in points]
+    outcomes = list([constraint.apply(x) for x in points])
     
     # assert check
     assert len(points) == 450
