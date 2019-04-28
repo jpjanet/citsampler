@@ -8,7 +8,7 @@ def test_1(tmpdir):
         using console
     """
     # set paramteters
-    infile =resource_filename(Requirement.parse("citsampler"),'/exampes/mixture.txt')
+    infile =resource_filename(Requirement.parse("citsampler"),'/examples/mixture.txt')
     outfle = tmpdir + '/mixture.out'
     
     # run the code using console!

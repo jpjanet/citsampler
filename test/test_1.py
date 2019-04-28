@@ -6,7 +6,7 @@ def test_1(tmpdir):
     """ regression test for alloy.txt case
     """
     # set paramteters
-    infile = resource_filename(Requirement.parse("citsampler"),'/exampes/alloy.txt')
+    infile = resource_filename(Requirement.parse("citsampler"),'/examples/alloy.txt')
     outfle = tmpdir + '/alloy.out'
     
     # run the code
