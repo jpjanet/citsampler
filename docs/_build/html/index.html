@@ -1,0 +1,253 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Welcome to citsampler’s documentation! &#8212; citsampler  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="welcome-to-citsampler-s-documentation">
+<h1>Welcome to citsampler’s documentation!<a class="headerlink" href="#welcome-to-citsampler-s-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="module-src.sampler">
+<span id="citsampler-sampler"></span><h1>citsampler sampler<a class="headerlink" href="#module-src.sampler" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="src.sampler.constrainedMCMC">
+<em class="property">class </em><code class="descclassname">src.sampler.</code><code class="descname">constrainedMCMC</code><span class="sig-paren">(</span><em>constraint</em>, <em>stepsize</em><span class="sig-paren">)</span><a class="headerlink" href="#src.sampler.constrainedMCMC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines a monte carlo sampler for constrained
+high-dimenisonal integration using rejection sampling</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>constraint</strong> – constraint class object defining the task</li>
+<li><strong>stepsize</strong> – float in [0,1], starting stepsize</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="src.sampler.constrainedMCMC.proposalDistribution">
+<code class="descname">proposalDistribution</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.sampler.constrainedMCMC.proposalDistribution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Proposal distribution for MCMC, generates new sample
+based on the current state and stepsize by combination
+with a random vector on the self.dim hypercube</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.sampler.constrainedMCMC.step">
+<code class="descname">step</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.sampler.constrainedMCMC.step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Take one step of rejection-sampling MCMC and update
+the resutling acceptance ratios</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="src.sampler.outputWriter">
+<code class="descclassname">src.sampler.</code><code class="descname">outputWriter</code><span class="sig-paren">(</span><em>filepath</em>, <em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#src.sampler.outputWriter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines a monte carlo sampler for constrained
+high-dimenisonal integration using rejection sampling</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>filepath</strong> – string, path to output file</li>
+<li><strong>data</strong> – np array, data to write</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="src.sampler.rsMcmcPhase">
+<code class="descclassname">src.sampler.</code><code class="descname">rsMcmcPhase</code><span class="sig-paren">(</span><em>constraint</em>, <em>targetSamples</em>, <em>numChains=5</em>, <em>maxIts=False</em>, <em>minIts=False</em>, <em>targetArLow=0.05</em>, <em>targetArHigh=0.25</em>, <em>stepModifier=1.05</em><span class="sig-paren">)</span><a class="headerlink" href="#src.sampler.rsMcmcPhase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform multi-chain rejection-sampling MCMC on the provided constraint object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>constraint</strong> – constraint class object defining the task</li>
+<li><strong>targetSamples</strong> – int, number of valid points to seek per chain</li>
+<li><strong>maxIts</strong> – int, maximum iterations per chain</li>
+<li><strong>minIts</strong> – int, minimum iterations per chain</li>
+<li><strong>targetArHigh</strong> – float in [0,1], maximum 100-step ar before step is increased</li>
+<li><strong>targetArLow</strong> – float in [0,1], minimum 100-step ar before step is reduced</li>
+<li><strong>stepModifier</strong> – float &gt;1, ammount to modify stepsize by</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">np.ndarray, valid points from all chains (my contain duplicates)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="src.sampler.sampler">
+<code class="descclassname">src.sampler.</code><code class="descname">sampler</code><span class="sig-paren">(</span><em>inputFile</em>, <em>outputFile</em>, <em>nResults</em><span class="sig-paren">)</span><a class="headerlink" href="#src.sampler.sampler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to find nResults spanning points satisfying the constraints given 
+in the inputFile, and write them to outputFile</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>inputFile</strong> – string, path to input file</li>
+<li><strong>outputFile</strong> – string, target output file</li>
+<li><strong>nResults</strong> – int, number of results to find</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">int, outcome flag (0=normal, 1=error)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-src.constraints">
+<span id="citsampler-constraints"></span><h1>citsampler constraints<a class="headerlink" href="#module-src.constraints" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="src.constraints.Constraint">
+<em class="property">class </em><code class="descclassname">src.constraints.</code><code class="descname">Constraint</code><span class="sig-paren">(</span><em>fname</em><span class="sig-paren">)</span><a class="headerlink" href="#src.constraints.Constraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constraints loaded from a file.</p>
+<dl class="method">
+<dt id="src.constraints.Constraint.apply">
+<code class="descname">apply</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#src.constraints.Constraint.apply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply the constraints to a vector, returning True only if all are satisfied</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>x</strong> – list or array on which to evaluate the constraints</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.constraints.Constraint.get_example">
+<code class="descname">get_example</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.constraints.Constraint.get_example" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the example feasible vector</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.constraints.Constraint.get_ndim">
+<code class="descname">get_ndim</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.constraints.Constraint.get_ndim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the dimension of the space on which the constraints are defined</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-src.__main__">
+<span id="citsampler-main"></span><h1>citsampler __main__<a class="headerlink" href="#module-src.__main__" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
+<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+</ul>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Welcome to citsampler’s documentation!</a></li>
+<li><a class="reference internal" href="#module-src.sampler">citsampler sampler</a></li>
+<li><a class="reference internal" href="#module-src.constraints">citsampler constraints</a></li>
+<li><a class="reference internal" href="#module-src.__main__">citsampler __main__</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, JP Janet.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
