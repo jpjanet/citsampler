@@ -1,0 +1,5 @@
+/*.txt
+/*.pyc
+citsampler.egg-info
+/src/__pycache__
+/conf.py
