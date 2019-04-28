@@ -24,7 +24,7 @@ setup(
     url=URL,
     packages=find_packages(),
     install_requires=REQUIRED,
-    entry_points={'console_scripts': ['citsampler = src.__main__:main']},
+    entry_points={'console_scripts': ['citsampler = citsampler.__main__:main']},
     package_data={'citsampler':['scripts/*.sh']},
     setup_requires=[''],
     include_package_data = True)
