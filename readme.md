@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/jpjanet/citsampler.svg?branch=master)](https://travis-ci.org/jpjanet/citsampler)
+
 Citsampler
 ==========
 Written by JP Janet
