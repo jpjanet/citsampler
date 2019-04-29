@@ -1,4 +1,5 @@
 language: python
+dist: xenial
 python:
   - "3.6"
 install:
@@ -8,6 +9,8 @@ install:
   - pip install pytest
   - pip install numpy
   - pip install pyclustering 
+
+  
 
 script:
   # Your test script goes here

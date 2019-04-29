@@ -15,13 +15,14 @@ def main():
     args = sys.argv[1:]
     if not len(args) == 3:
         print('Wrong number of arguments. Please invoke this script with <inputfile> <outputfile> <samples>')
-        
+
     else:
-        args = {'inputFile':sys.argv[1],'outputFile':sys.argv[2],
-                'nResults':int(sys.argv[3])}
-        
-        # invoke function 
+        args = {'inputFile': sys.argv[1], 'outputFile': sys.argv[2],
+                'nResults': int(sys.argv[3])}
+
+        # invoke function
         sys.exit(sampler(**args))
-    
+
+
 if __name__ == '__main__':
     main()

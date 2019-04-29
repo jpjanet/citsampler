@@ -1,5 +1,6 @@
 # this script is provided by Citrine and used for parsing input file
 
+
 class Constraint():
     """Constraints loaded from a file."""
 
@@ -42,4 +43,4 @@ class Constraint():
         for expr in self.exprs:
             if not eval(expr):
                 return False
-        return True   
+        return True
